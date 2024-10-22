@@ -51,5 +51,9 @@
 			<string>en</string>
 			<string>vi</string>
 		</array>
+		<key>NSSpeechRecognitionUsageDescription</key>
+		<string>Recogniton use and display input</string>
+		<key>NSMicrophoneUsageDescription</key>
+		<string>Defect speech input</string>
 	</dict>
 </plist>

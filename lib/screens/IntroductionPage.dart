@@ -15,8 +15,7 @@ class OnBoardingPageState extends State<OnBoardingPage> {
 
   void _onIntroEnd(context) {
     Navigator.of(context).pushReplacement(
-      MaterialPageRoute(
-          builder: (_) => const MyHomePage(title: 'Flutter ToDoApp')),
+      MaterialPageRoute(builder: (_) => const MyHomePage(title: 'ToDoApp')),
     );
   }
 
