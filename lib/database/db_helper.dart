@@ -45,7 +45,7 @@ class DatabaseHelper {
     await db.execute('''
       CREATE TABLE favourites (
         id $idType,
-        music_id INTEGER,
+        music_id INTEGER
       )
     ''');
   }

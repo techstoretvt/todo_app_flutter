@@ -1,19 +1,32 @@
 // ignore_for_file: non_constant_identifier_names
 
 class Music {
-  late final int? id;
-  late final String song_name;
-  late final String author_name;
-  late final int favourite_rating;
-  late final String song_image;
+  late int id;
+  late String song_name;
+  late String author_name;
+  late int favourite_rating;
+  late String song_image;
 
   Music({
-    this.id,
+    required this.id,
     required this.song_name,
     required this.author_name,
     required this.favourite_rating,
     required this.song_image,
   });
+
+  void update(Music newMusic) {
+    song_name = newMusic.song_name;
+    author_name = newMusic.author_name;
+    favourite_rating = newMusic.favourite_rating;
+    song_image = newMusic.song_image;
+  }
+
+  void updateRating(int newRating) {
+    favourite_rating = newRating;
+  }
+
+  int get Id => id;
 
   Map<String, dynamic> toMap() {
     return {

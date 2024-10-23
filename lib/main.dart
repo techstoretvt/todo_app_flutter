@@ -2,6 +2,7 @@ import 'package:adaptive_theme/adaptive_theme.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:todo_app/screens/AddItemPage.dart';
+import 'package:todo_app/screens/EditItemPage.dart';
 import 'package:todo_app/screens/IntroductionPage.dart';
 
 void main() async {
@@ -41,6 +42,7 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => const OnBoardingPage(),
           '/addItem': (context) => const AddItemPage(),
+          // '/editItem': (context) => const EditItemPage(),
         },
       ),
     );

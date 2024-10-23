@@ -1,5 +1,6 @@
 {
     "welcome": "Welcome to Flutter",
     "hello": "Hello!",
-    "goodbye": "Goodbye!"
+    "goodbye": "Goodbye!",
+    "nodata": "No data available"
 }
