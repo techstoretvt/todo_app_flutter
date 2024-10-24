@@ -1,5 +1,6 @@
 import 'package:sqflite/sqflite.dart';
 import 'package:path/path.dart';
+import 'package:todo_app/models/favourite_model.dart';
 import 'package:todo_app/models/music_model.dart';
 
 class DatabaseHelper {
@@ -53,7 +54,9 @@ class DatabaseHelper {
   /// Music
   Future<void> insertMusic(Music music) async {
     final db = await instance.database;
-    await db.insert('musics', music.toMap(),
+    Map<String, dynamic> musicJson = music.toMap();
+    musicJson.remove("id");
+    await db.insert('musics', musicJson,
         conflictAlgorithm: ConflictAlgorithm.replace);
   }
 
@@ -87,4 +90,28 @@ class DatabaseHelper {
   }
 
   /// Favourite
+  Future<void> addFavourite(int musicId) async {
+    final db = await instance.database;
+    await db.insert('favourites', {'music_id': musicId},
+        conflictAlgorithm: ConflictAlgorithm.replace);
+  }
+
+  Future<int> deleteFavourite(int musicId) async {
+    final db = await instance.database;
+    return await db.delete(
+      'favourites',
+      where: 'music_id = ?',
+      whereArgs: [musicId],
+    );
+  }
+
+  Future<List<Favourite>> fetchFavouriteById(int musicId) async {
+    final db = await instance.database;
+    final maps = await db
+        .query('favourites', where: 'music_id = ?', whereArgs: [musicId]);
+
+    return List.generate(maps.length, (i) {
+      return Favourite.fromMap(maps[i]);
+    });
+  }
 }

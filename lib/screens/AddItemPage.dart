@@ -97,6 +97,7 @@ class _AddItemPageState extends State<AddItemPage> {
 
     // Add music
     Music newMusic = Music.fromMap({
+      "id": 0,
       "song_name": name,
       "author_name": author,
       "song_image": image,

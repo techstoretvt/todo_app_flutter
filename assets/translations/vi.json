@@ -2,5 +2,7 @@
     "welcome": "Chào mừng đến với Flutter",
     "hello": "Xin chào!",
     "goodbye": "Tạm biệt!",
-    "nodata": "Không có dữ liệu"
+    "nodata": "Không có dữ liệu",
+    "edit": "Sửa",
+    "delete": "Xóa"
 }

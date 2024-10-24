@@ -40,7 +40,7 @@ class Music {
 
   factory Music.fromMap(Map<String, dynamic> map) {
     return Music(
-      id: map['id'],
+      id: map['id'] ?? 0,
       song_name: map['song_name'],
       author_name: map['author_name'],
       favourite_rating: map['favourite_rating'],

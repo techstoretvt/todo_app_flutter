@@ -2,5 +2,7 @@
     "welcome": "Welcome to Flutter",
     "hello": "Hello!",
     "goodbye": "Goodbye!",
-    "nodata": "No data available"
+    "nodata": "No data available",
+    "edit": "Edit",
+    "delete": "Delete"
 }
